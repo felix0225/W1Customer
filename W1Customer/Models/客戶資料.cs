@@ -8,7 +8,6 @@
 //------------------------------------------------------------------------------
 
 using System.ComponentModel.DataAnnotations;
-using System.Net.Cache;
 
 namespace W1Customer.Models
 {
@@ -27,13 +26,16 @@ namespace W1Customer.Models
         public int Id { get; set; }
         [Required]
         public string 客戶名稱 { get; set; }
+        [Required]
         public string 統一編號 { get; set; }
+        [Required]
         public string 電話 { get; set; }
         public string 傳真 { get; set; }
         public string 地址 { get; set; }
         [Required]
         [EmailAddress]
         public string Email { get; set; }
+        public bool 是否已刪除 { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<客戶銀行資訊> 客戶銀行資訊 { get; set; }
