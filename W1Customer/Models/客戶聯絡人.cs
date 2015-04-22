@@ -7,6 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel.DataAnnotations;
+
 namespace W1Customer.Models
 {
     using System;
@@ -17,8 +19,12 @@ namespace W1Customer.Models
         public int Id { get; set; }
         public int 客戶Id { get; set; }
         public string 職稱 { get; set; }
+        [Required]
         public string 姓名 { get; set; }
+        [Required]
+        [EmailAddress]
         public string Email { get; set; }
+        [Required]
         public string 手機 { get; set; }
         public string 電話 { get; set; }
     
