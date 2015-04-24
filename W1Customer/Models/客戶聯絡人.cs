@@ -24,6 +24,7 @@ namespace W1Customer.Models
         [Required]
         [EmailAddress]
         public string Email { get; set; }
+        [RegularExpression(@"\d{4}-\d{6}", ErrorMessage = "手機格式必須為 0911-111111")]
         public string 手機 { get; set; }
         public string 電話 { get; set; }
         public bool 是否已刪除 { get; set; }
